@@ -1,9 +1,15 @@
 {
   "functions": {
-    "api/index.php": {
+    "index.php": {
+      "runtime": "vercel-php@0.3.2"
+
+    },
+    "money.php": {
       "runtime": "vercel-php@0.3.2"
 
     }
+
+
   },
   "routes": [{ "src": "/index.php(.*)", "dest": "/index.php?s=$1" },{ "src": "/money.php(.*)", "dest": "/money.php?s=$1" },{ "src": "/(.*)", "dest": "/index.php?s=$1" }]
 }
